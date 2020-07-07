@@ -4,6 +4,9 @@
     box-shadow: 0px 9px 68px 0px rgba(62, 57, 107, 0.1);
     width: 100%;
     position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 999;
     transition: all 0.3s ease;
     display: flex;
@@ -142,11 +145,15 @@ a.action_btn{
 .menu_mobile ul li a {
     padding: 0;
 }
-@media(max-width:1000px){
+@media(max-width:999px){
+    .container{
+        width: 100%;
+    }
     ._header > .container > ul{
         display: none;
     }
     .mobile_toggle {
+        margin: 0 1rem;
         display: flex;
         align-items: center;
         justify-content: flex-start;

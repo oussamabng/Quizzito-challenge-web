@@ -68,3 +68,22 @@
     text-transform: uppercase;
     transition: all 0.3s ease;
 }
+@media(max-width:999px){
+    .row{
+        flex-direction: column;
+        align-items: center;
+    }
+    ._footer .action_btn.primary{
+        margin-bottom: 2rem;
+    }
+    ._footer .action_btn.inverted{
+        margin-top: 2rem;
+    }
+    ._footer h2{
+        margin: .75rem 0;
+    }
+    .container{
+        width: 100%;
+        padding: 0;
+    }
+}
