@@ -42,6 +42,17 @@ const Header = ()=>{
                         </a>
                     </li>
                 </ul>
+                <div className="mobile_toggle">
+                <a href="#" style={{
+                    display:"flex",
+                    alignItems:"center"
+                }}>
+                     <img src="https://quizzito.com/main/assets/images/whats.png" alt="whats"/>
+                </a>
+                <button className="toggle">
+                <i class="fa fa-bars"></i>
+                </button>
+                </div>
             </div>
         </div>
     )
