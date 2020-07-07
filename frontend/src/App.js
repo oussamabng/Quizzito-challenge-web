@@ -1,17 +1,13 @@
 import React from 'react'
 
-//? import components
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
+//? import screens
+import Quiz from "./screens/Quiz";
+
 
 function App() {
   return (
     <>
-    <Header />
-    <p style={{
-      minHeight:"40vh"
-    }}></p>
-    <Footer />
+    <Quiz />
     </>
   );
 }
