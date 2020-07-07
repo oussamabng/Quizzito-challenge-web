@@ -51,7 +51,7 @@ const Header = ()=>{
                     display:"flex",
                     alignItems:"center"
                 }}>
-                     <img src="https://quizzito.com/main/assets/images/whats.png" alt="whats"/>
+                <img src="https://quizzito.com/main/assets/images/whats.png" alt="whats"/>
                 </a>
                 <button className="toggle" onClick={handleMenu}>
                 <i class="fa fa-bars"></i>
