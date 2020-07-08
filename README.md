@@ -7,3 +7,7 @@ You can make use of this [quiz](https://quizzito.com/main/assets/try_quiz/quizze
 * [Empty Emoji](https://quizzito.com/main/assets/images/quiz/emptyemoji.png)
 * [Happy Emoji](https://quizzito.com/main/assets/images/quiz/happyemoji.png)
 * [Sad Emoji](https://quizzito.com/main/assets/images/quiz/sademoji.png)
+
+check readme in frontend/src folder.
+
+website link : https://quizzito-challenge-web.vercel.app/
