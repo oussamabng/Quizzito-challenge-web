@@ -54,7 +54,7 @@ const Header = ()=>{
                 <img src="https://quizzito.com/main/assets/images/whats.png" alt="whats"/>
                 </a>
                 <button className="toggle" onClick={handleMenu}>
-                <i class="fa fa-bars"></i>
+                <i className="fa fa-bars"></i>
                 </button>
                    <div className={isOpen?"menu_mobile":"menu_mobile closed"}>
                         <ul>
