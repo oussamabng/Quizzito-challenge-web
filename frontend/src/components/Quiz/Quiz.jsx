@@ -12,6 +12,7 @@ const Quiz = (props) => {
     const [counter,setCounter] = useState(-1);
     const [status,setStatus] = useState(0);
     const [left,setLeft] = useState(46);
+    const [leftMobile,setleftMobile] = useState(30);
     const [choice,setChoice] = useState(0);
     const [points,setPoints] = useState(0);
     const [succ,setSuccess] = useState();
@@ -48,6 +49,7 @@ const Quiz = (props) => {
             setTimeout(()=>{
                 if (counter < 3) {
                     setLeft(prevState=>prevState+90)
+                    setleftMobile(prevState=>prevState+57)
                 }
                 else {
                     history.push({
@@ -72,6 +74,11 @@ const Quiz = (props) => {
             <div className="progressBar">
                 <div className="arrowProgress" style={{
                     left:`${left}px`
+                }}></div>
+            </div>
+            <div className="progressBar mobile">
+                <div className="arrowProgress" style={{
+                    left:`${leftMobile}px`
                 }}></div>
             </div>
             <div className="_questions">

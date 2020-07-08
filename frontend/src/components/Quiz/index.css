@@ -177,6 +177,9 @@
     border-color: #1e7e34;
     transform: translateY(-2px);
 }
+.progressBar.mobile{
+    display: none;
+}
 @media(max-width:1199px){
     ._main .container {
         max-width: 100%;
@@ -186,6 +189,12 @@
     }
 }
 @media(max-width:1099px){
+    .progressBar{
+        display: none;
+    }
+    .progressBar.mobile{
+        display: flex;
+    }
     ._main .container {
         flex-direction: column-reverse;
         align-items: center;

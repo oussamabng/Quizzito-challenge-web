@@ -30,3 +30,9 @@
 .score_action p{
     color: white!important;
 }
+@media(max-width:999px){
+    .score_action{
+        flex-direction: column;
+        align-items: center;
+    }
+}
