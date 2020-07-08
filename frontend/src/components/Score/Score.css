@@ -1,0 +1,32 @@
+._main.score .col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+._main.score .col > p{
+    color: #a7a2ce ;
+    font-size: 16px;
+    font-weight: 400;
+}
+._main.score .col h3{
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.score_action{ 
+    margin:2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.score_action .action_btn{
+    font-size: 14px;
+    padding: .75rem 1.75rem!important;
+    border-radius: 30px;
+}
+.score_action p{
+    color: white!important;
+}

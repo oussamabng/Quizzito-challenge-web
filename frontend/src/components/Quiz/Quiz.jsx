@@ -1,23 +1,27 @@
 import React,{useEffect,useState} from 'react';
+import { useHistory } from "react-router-dom";
 
 //? import component
 import Step from "./Step";
 
 const Quiz = (props) => {
+    const {data} = props;
+    let history = useHistory()
+
     const [randomData,setRandomData] = useState([])
     const [counter,setCounter] = useState(-1);
     const [status,setStatus] = useState(0);
     const [left,setLeft] = useState(46);
-    const [choice,setChoice] = useState();
+    const [choice,setChoice] = useState(0);
     const [points,setPoints] = useState(0);
     const [succ,setSuccess] = useState();
     const [failed,setFailed] = useState()
 
+    //? for choosing a response
     const handleChoice = (e)=>{
         const i = parseInt(e.currentTarget.attributes["data-number"].value)
         setChoice(i);
     }
-    const {data} = props;
     useEffect(() => {
         let item = Math.floor(Math.random() * 10);
         if (item>=5){
@@ -29,23 +33,34 @@ const Quiz = (props) => {
         //? to pick the first 5 questions or the last 5 questions.
     }, [data]);
     const confirmQuestion = ()=>{
-        if (parseInt(randomData[counter+1].answer) === choice){
-            setChoice(null)
-            setSuccess(choice);
-            setStatus(1);
-            setPoints(prevState=>prevState+10)
+        if (choice !== 0){
+            if (parseInt(randomData[counter+1].answer) === choice){
+                setChoice(null)
+                setSuccess(choice);
+                setStatus(1);
+                setPoints(prevState=>prevState+10)
+            }
+            else {
+                setChoice(null)
+                setFailed(choice);
+                setStatus(-1);
+            }
+            setTimeout(()=>{
+                if (counter < 3) {
+                    setLeft(prevState=>prevState+90)
+                }
+                else {
+                    history.push({
+                        pathname: '/end',
+                        state: { score: points }
+                    })
+                }
+                setCounter(prevState=>prevState+1)
+                setSuccess(null);
+                setFailed(null);
+                setChoice(0)
+            },800)
         }
-        else {
-            setChoice(null)
-            setFailed(choice);
-            setStatus(-1);
-        }
-        setTimeout(()=>{
-            setCounter(prevState=>prevState+1)
-            setLeft(prevState=>prevState+90);
-            setSuccess(null);
-            setFailed(null);
-        },700)
     }
     return (
         <div className="_quiz">

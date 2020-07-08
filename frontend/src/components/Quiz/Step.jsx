@@ -7,11 +7,13 @@ export default function Step(props) {
     useEffect(()=>{
         console.log({counter,index})
         if (counter === index){
-            if (status === 1){
-                setImageSrc("https://quizzito.com/main/assets/images/quiz/happyemoji.png")
-            }
-            else if (status === -1){
-                setImageSrc("https://quizzito.com/main/assets/images/quiz/sademoji.png");
+            if (imageSrc !== "https://quizzito.com/main/assets/images/quiz/sademoji.png" || imageSrc !== "https://quizzito.com/main/assets/images/quiz/happyemoji.png"){
+                if (status === 1){
+                    setImageSrc("https://quizzito.com/main/assets/images/quiz/happyemoji.png")
+                }
+                else if (status === -1){
+                    setImageSrc("https://quizzito.com/main/assets/images/quiz/sademoji.png");
+                }
             }
         }
     },[counter])
