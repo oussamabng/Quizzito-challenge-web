@@ -68,6 +68,11 @@
     text-transform: uppercase;
     transition: all 0.3s ease;
 }
+@media(max-width:1199px){
+    ._footer .container{
+        max-width: 100%;
+    }
+}
 @media(max-width:999px){
     .row{
         flex-direction: column;

@@ -174,4 +174,8 @@ a.action_btn{
         background: no-repeat center center;
         color: rgba(0,0,0,.5);
     }
+    ._header .container{
+        margin : 0 1rem;
+        width:100%!important;
+    }
 }

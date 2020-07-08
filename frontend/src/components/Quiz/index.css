@@ -173,7 +173,34 @@
 }
 ._questions .question_action p:hover{
     color: #fff;
-background-color: #218838;
-border-color: #1e7e34;
-transform: translateY(-2px);
+    background-color: #218838;
+    border-color: #1e7e34;
+    transform: translateY(-2px);
+}
+@media(max-width:1199px){
+    ._main .container {
+        max-width: 100%;
+    }
+    .container{
+        width: auto!important;
+    }
+}
+@media(max-width:1099px){
+    ._main .container {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+    ._main .col{
+        max-width: none!important;
+        margin: 0 2rem;
+    }
+    .step_img{
+        margin: 0 .25rem;
+    }
+}
+@media(max-width:799px){
+    .circle{
+        display: none;
+    }
 }
