@@ -11,3 +11,5 @@ You can make use of this [quiz](https://quizzito.com/main/assets/try_quiz/quizze
 check readme in frontend/src folder.
 
 website link : https://quizzito-challenge-web.vercel.app/
+
+<img src="https://user-images.githubusercontent.com/47861021/166512440-54c152fb-b237-4d52-8818-eaf107276baa.png" width="90%"></img> 
